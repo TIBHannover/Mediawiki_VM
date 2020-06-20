@@ -4,6 +4,9 @@
   roles:
     - git
     - mariadb
+    - apache
     # - php
     # - mediawiki
     # - semantic
+
+    # imagemagick
