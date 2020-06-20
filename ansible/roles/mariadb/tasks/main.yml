@@ -1,0 +1,23 @@
+---
+- name: 2. Install MariaDB server package
+  package:
+    name: mariadb-server
+    state: present
+
+- name: 1. Configure MariaDB@vm.local
+  copy:
+    src: mysql.cnf
+    dest: /etc/mysql/my.cnf
+    mode: o-rw
+
+- name: 3. Start Mysql Service
+  service:
+    name: mysql
+    state: started
+    enabled: true
+
+- name: install python-pymysql to work with ansible mysql modules
+  apt:
+    state: "present"
+    pkg: python-pymysql
+
