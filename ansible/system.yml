@@ -5,7 +5,7 @@
     - git
     - mariadb
     - apache
-    # - php
+    - php
     # - mediawiki
     # - semantic
 
