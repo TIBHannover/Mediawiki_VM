@@ -63,6 +63,9 @@
   args:
     creates: '{{ mediawiki_path }}/LocalSettings.php'
 
+- include: extensions.yml
+
+
 - name: Mediawiki URL
   debug:
     msg: "WIKI: http://{{inventory_hostname}}/{{mediawiki_dir}}"

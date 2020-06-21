@@ -4,6 +4,17 @@
 ## run ansible playbook
 `ansible-playbook ansible/system.yml`.
 
+## Once Mediawiki VM is created:
+* http://192.168.60.10/info.php
+
+* MW user: Root ?
+* MW user passwd: Admin ?
+
+## Variable locations
+* `ansible/roles/mediawiki/defaults/main.yml`: MW & MariaDB vars 
+* `ansible/roles/mediawiki/vars/extensions.yml`: MW extensions
+
+
 ## Ansible structure
 ```
 ├── roles

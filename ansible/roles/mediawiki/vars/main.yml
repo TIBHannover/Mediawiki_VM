@@ -1,0 +1,31 @@
+extensions_bundled:
+  - ext_name: "Cite"
+    load_strs: 
+      - "wfLoadExtension('Cite');"
+  - ext_name: "CodeEditor"
+    load_strs: 
+      - "wfLoadExtension('CodeEditor');"
+      - "$wgDefaultUserOptions['usebetatoolbar'] = 1;"
+  - ext_name: "ParserFunctions"
+    load_strs: 
+      - "wfLoadExtension('ParserFunctions');"
+  - ext_name: "Renameuser"
+    load_strs: 
+      - "wfLoadExtension('Renameuser');"
+  - ext_name: "SyntaxHighlight_GeSHi"
+    load_strs:
+      - "wfLoadExtension('SyntaxHighlight_GeSHi');" 
+      - "$wgSyntaxHighlightModels[CONTENT_MODEL_SCRIBUNTO] = 'lua';"    
+  - ext_name: "WikiEditor"
+    load_strs: 
+      - "wfLoadExtension( 'WikiEditor' );"    
+  - ext_name: "Scribunto"
+    load_strs:
+      - "wfLoadExtension( 'Scribunto' );"
+      - "$wgScribuntoDefaultEngine = 'luastandalone';"
+      - "$wgScribuntoUseGeSHi = true;"
+      - "$wgScribuntoUseCodeEditor = true;"
+  - ext_name: "SpamBlacklist"
+    load_strs: 
+      - "wfLoadExtension( SpamBlacklist );"    
+
