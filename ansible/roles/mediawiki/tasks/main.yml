@@ -65,6 +65,8 @@
 
 - include: extensions.yml
 
+- include: extensions_composer.yml
+
 
 - name: Mediawiki URL
   debug:

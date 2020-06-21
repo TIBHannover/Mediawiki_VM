@@ -29,3 +29,35 @@ extensions_bundled:
     load_strs: 
       - "wfLoadExtension( SpamBlacklist );"    
 
+extensions_smw:
+  - ext_name: "Semantic Mediawiki"
+    load_strs: 
+      - "enableSemantics( '{{server_name}}' );"
+      - "$smwgShowFactbox=true;"
+      - "$smwgFieldTypeFeatures=SMW_FIELDT_CHAR_NOCASE;"
+      - "$smwgQMaxInlineLimit=1500;"
+      - "$smwgQMaxInlineLimitSets=1500;"
+      - "$smwgChangePropagationProtection=true;"
+
+extensions_composer:
+  - ext_name: "Semantic Mediawiki"
+    composer_cmd: 'mediawiki/semantic-media-wiki "{{smw_version}}"'
+    load_strs: 
+      - "enableSemantics( '{{server_name}}' );"
+      - "$smwgShowFactbox=true;"
+      - "$smwgFieldTypeFeatures=SMW_FIELDT_CHAR_NOCASE;"
+      - "$smwgQMaxInlineLimit=1500;"
+      - "$smwgQMaxInlineLimitSets=1500;"
+      - "$smwgChangePropagationProtection=true;"
+  - ext_name: "Semantic Scribunto"
+    composer_cmd: 'mediawiki/semantic-scribunto "{{semanticscribunto_version}}"'
+    load_strs: 
+      - "wfLoadExtension( 'SemanticScribunto' );"
+  - ext_name: "Semantic Cite"
+    composer_cmd: 'mediawiki/semantic-cite "{{semanticite_version}}"'
+    load_strs: 
+      - "wfLoadExtension( 'SemanticCite' );"
+  - ext_name: "Semantic Result Formats"
+    composer_cmd: 'mediawiki/semantic-result-formats "{{semanticformats_version}}"'
+    load_strs:
+      - "wfLoadExtension('SemanticResultFormats');"
