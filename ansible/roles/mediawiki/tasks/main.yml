@@ -40,10 +40,15 @@
     --dbtype {{mediawiki_db.connection}}
     --lang {{mediawiki_language}}
     --pass {{admin_user.pass}}
-    --scriptpath '{{mediawiki_dir}}'
+    --scriptpath /'{{mediawiki_dir}}'
+    --server 'http://{{inventory_hostname}}'
     {{instance_name}} {{admin_user.name}}
   args:
     creates: '{{ mediawiki_path }}/LocalSettings.php'
+
+- name: Mediawiki URL
+  debug:
+    msg: WIKI: http://{{inventory_hostname}}/{{mediawiki_dir}}
 
 # - name: 6. Enable clean URL's
 #   lineinfile:
