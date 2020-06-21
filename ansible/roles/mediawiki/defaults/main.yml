@@ -13,8 +13,8 @@ mediawiki_skins:
 - Vector
 
 admin_user:
-  name: root
-  pass: admin
+  name: Admin
+  pass: adminpwd
 mediawiki_db:
   connection: mysql
   name: mw_{{instance_name}}
