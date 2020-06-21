@@ -6,7 +6,7 @@
     - mariadb
     - apache
     - php
-    # - mediawiki
+    - mediawiki
     # - semantic
 
     # imagemagick
